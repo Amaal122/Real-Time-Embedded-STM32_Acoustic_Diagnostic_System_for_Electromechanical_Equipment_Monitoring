@@ -1,0 +1,7 @@
+,auc,auc,auc_min_id,auc_min_id,f1_macro_thr_val,f1_macro_thr_val,f1_macro_0.5,f1_macro_0.5,f1_anom_0.2_balanced,f1_anom_0.2_balanced,baseline_always_normal,baseline_always_normal
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+machine,,,,,,,,,,,,
+fan,0.765,0.01,0.541,0.024,0.662,0.008,0.647,0.006,0.725,0.006,0.423,0.0
+pump,0.892,0.017,0.854,0.021,0.792,0.02,0.72,0.009,0.798,0.014,0.471,0.0
+slider,0.947,0.012,0.869,0.026,0.888,0.012,0.869,0.011,0.859,0.014,0.439,0.0
+valve,0.871,0.01,0.8,0.034,0.728,0.008,0.662,0.013,0.788,0.009,0.469,0.0
