@@ -1,0 +1,27 @@
+{
+  "classifier": "XGBoost",
+  "evaluation": "LeaveOneGroupOut by subject",
+  "subjects": [
+    "id_00",
+    "id_02",
+    "id_04",
+    "id_06"
+  ],
+  "features": 65,
+  "top_k_values": [
+    10,
+    20
+  ],
+  "positive_class": "abnormal",
+  "threshold": 0.5,
+  "feature_selection_refit_inside_each_training_fold": true,
+  "model_parameters": {
+    "n_estimators": 200,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "scale_pos_weight": "negative/positive training rows"
+  },
+  "random_seed": 42
+}

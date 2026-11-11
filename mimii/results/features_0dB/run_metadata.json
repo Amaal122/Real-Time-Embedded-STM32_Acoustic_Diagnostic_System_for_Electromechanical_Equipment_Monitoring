@@ -1,0 +1,26 @@
+{
+  "input": "0_dB_slider",
+  "wavelet": "db4",
+  "wavelet_packet_level": 4,
+  "filter": {
+    "type": "Butterworth bandpass",
+    "order": 4,
+    "low_hz": 300,
+    "high_hz": 7000
+  },
+  "window_sec": 1.0,
+  "overlap": 0.5,
+  "random_seed": null,
+  "selected_channels_1_based": [
+    3,
+    5
+  ],
+  "source_files": 4094,
+  "windows": 77786,
+  "skipped_files": [],
+  "feature_count": 65,
+  "classes": [
+    "abnormal",
+    "normal"
+  ]
+}

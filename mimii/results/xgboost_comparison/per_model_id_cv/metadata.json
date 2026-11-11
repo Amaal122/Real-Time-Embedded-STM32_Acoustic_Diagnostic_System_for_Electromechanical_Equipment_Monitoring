@@ -1,0 +1,18 @@
+{
+  "evaluation": "5-fold stratified CV grouped by WAV, run separately within each MIMII model ID",
+  "features_per_method": 60,
+  "methods": [
+    "JSD",
+    "ANOVA"
+  ],
+  "folds": 5,
+  "xgboost_parameters": {
+    "n_estimators": 200,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "scale_pos_weight": 1.0
+  },
+  "previous_exploration_used_all_recordings": true
+}

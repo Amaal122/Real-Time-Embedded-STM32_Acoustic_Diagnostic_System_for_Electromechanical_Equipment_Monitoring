@@ -1,0 +1,13 @@
+﻿# Source datasets and recordings
+0_dB_slider/
+6_dB_valve*/
+data/
+car_diagnostics_features/
+features_0dB/features_65.csv
+*.wav
+# Local runtime and caches
+**/__pycache__/
+.cnn_runtime/
+# Per-recording prediction exports
+**/*predictions*.csv
+**/recording_split.csv
