@@ -1,0 +1,57 @@
+{
+  "recordings": 1386,
+  "windows": 2772,
+  "folds": 5,
+  "threshold": 0.5,
+  "split_unit": "original WAV file; windows from a WAV stay in one fold",
+  "classifier": "RandomForestClassifier, 400 trees, class_weight=balanced, all 65 features",
+  "fault_mapping": {
+    "worn_out_brakes": {
+      "positive_folders": [
+        "braking__worn_out_brakes"
+      ],
+      "model_file": "detector_worn_out_brakes.joblib"
+    },
+    "bad_ignition": {
+      "positive_folders": [
+        "startup__bad_ignition"
+      ],
+      "model_file": "detector_bad_ignition.joblib"
+    },
+    "dead_battery": {
+      "positive_folders": [
+        "startup__dead_battery"
+      ],
+      "model_file": "detector_dead_battery.joblib"
+    },
+    "low_oil": {
+      "positive_folders": [
+        "idle__combined__no oil_serpentine belt",
+        "idle__combined__power steering combined_no oil",
+        "idle__combined__power steering combined_no oil_serpentine belt",
+        "idle__low_oil"
+      ],
+      "model_file": "detector_low_oil.joblib"
+    },
+    "power_steering": {
+      "positive_folders": [
+        "idle__combined__power steering combined_no oil",
+        "idle__combined__power steering combined_no oil_serpentine belt",
+        "idle__combined__power steering combined_serpentine belt",
+        "idle__power_steering"
+      ],
+      "model_file": "detector_power_steering.joblib"
+    },
+    "serpentine_belt": {
+      "positive_folders": [
+        "idle__combined__no oil_serpentine belt",
+        "idle__combined__power steering combined_no oil_serpentine belt",
+        "idle__combined__power steering combined_serpentine belt",
+        "idle__serpentine_belt"
+      ],
+      "model_file": "detector_serpentine_belt.joblib"
+    }
+  },
+  "combined_fault_policy": "a combination WAV is positive for each component named in its folder",
+  "evaluation_note": "Pooled out-of-fold scores are cross-validated estimates; final saved models are refit on all labelled WAVs."
+}

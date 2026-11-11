@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#081426"/><stop offset="1" stop-color="#102b43"/></linearGradient>
+  <linearGradient id="blue" x2="1" y2="1"><stop stop-color="#173e68"/><stop offset="1" stop-color="#102947"/></linearGradient>
+  <linearGradient id="teal" x2="1" y2="1"><stop stop-color="#164e57"/><stop offset="1" stop-color="#123842"/></linearGradient>
+  <linearGradient id="amber" x2="1" y2="1"><stop stop-color="#61451d"/><stop offset="1" stop-color="#3b301f"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#020711" flood-opacity=".35"/></filter>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1L10 6 1 11" fill="none" stroke="#71d9d1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <style>
+    text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#f2f7fc}.title{font-size:38px;font-weight:750;letter-spacing:.3px}.subtitle{font-size:17px;fill:#aac0d4}.head{font-size:21px;font-weight:700}.body{font-size:16px;fill:#d4e1ed}.small{font-size:14px;fill:#a9bfd1}.tag{font-size:13px;font-weight:700;letter-spacing:1px}.num{font-size:14px;font-weight:800;fill:#09202c}
+  </style>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<circle cx="1450" cy="80" r="240" fill="#1c5770" opacity=".13"/><circle cx="65" cy="950" r="270" fill="#287b77" opacity=".10"/>
+<text x="100" y="82" class="tag" fill="#71d9d1">DIAGNOSTIC AUDIO AUTOMOBILE</text>
+<text x="100" y="132" class="title">Architecture du système</text>
+<text x="100" y="166" class="subtitle">Du signal sonore à la détection et à l’identification des pannes</text>
+
+<!-- Main flow cards -->
+<g filter="url(#shadow)">
+ <rect x="90" y="215" width="300" height="155" rx="20" fill="url(#blue)" stroke="#3474a4"/>
+ <rect x="445" y="215" width="330" height="155" rx="20" fill="url(#blue)" stroke="#3474a4"/>
+ <rect x="830" y="215" width="330" height="155" rx="20" fill="url(#teal)" stroke="#32969a"/>
+ <rect x="1215" y="215" width="300" height="155" rx="20" fill="url(#amber)" stroke="#ba8b3c"/>
+</g>
+<g><circle cx="120" cy="247" r="16" fill="#72d9d1"/><text x="120" y="252" text-anchor="middle" class="num">1</text><text x="148" y="254" class="head">Enregistrement WAV</text><text x="120" y="294" class="body">Audio moteur et composants</text><text x="120" y="322" class="body">Braking · Idle · Startup</text><text x="120" y="350" class="small">1 386 fichiers · mono</text></g>
+<g><circle cx="475" cy="247" r="16" fill="#72d9d1"/><text x="475" y="252" text-anchor="middle" class="num">2</text><text x="503" y="254" class="head">Prétraitement du signal</text><text x="475" y="294" class="body">Rééchantillonnage à 16 kHz</text><text x="475" y="322" class="body">Filtre passe-bande : 300–7 000 Hz</text><text x="475" y="350" class="small">Fenêtres de 1 s · chevauchement 50 %</text></g>
+<g><circle cx="860" cy="247" r="16" fill="#72d9d1"/><text x="860" y="252" text-anchor="middle" class="num">3</text><text x="888" y="254" class="head">Extraction des caractéristiques</text><text x="860" y="294" class="body">65 caractéristiques audio</text><text x="860" y="322" class="body">Temporelles · spectrales · Wavelet</text><text x="860" y="350" class="small">Wavelet Packet db4 · niveau 4</text></g>
+<g><circle cx="1245" cy="247" r="16" fill="#ffd27e"/><text x="1245" y="252" text-anchor="middle" class="num">4</text><text x="1273" y="254" class="head">Agrégation par fichier</text><text x="1245" y="294" class="body">Moyenne des probabilités</text><text x="1245" y="322" class="body">des fenêtres du même WAV</text><text x="1245" y="350" class="small">Une décision par enregistrement</text></g>
+<path d="M395 293H431" stroke="#71d9d1" stroke-width="3" marker-end="url(#arrow)"/><path d="M780 293H816" stroke="#71d9d1" stroke-width="3" marker-end="url(#arrow)"/><path d="M1165 293H1201" stroke="#71d9d1" stroke-width="3" marker-end="url(#arrow)"/>
+
+<!-- Split and diagnosis -->
+<path d="M1365 371V420H800V445" fill="none" stroke="#71d9d1" stroke-width="3" marker-end="url(#arrow)"/>
+<g filter="url(#shadow)"><rect x="575" y="455" width="450" height="125" rx="20" fill="url(#blue)" stroke="#4a82b0"/></g>
+<circle cx="610" cy="489" r="16" fill="#72d9d1"/><text x="610" y="494" text-anchor="middle" class="num">5</text>
+<text x="640" y="496" class="head">Détection : normal ou anormal</text>
+<text x="610" y="535" class="body">XGBoost · seuil calibré sur les enregistrements normaux</text>
+<text x="610" y="560" class="small">Le seuil est réglé sur la validation, puis évalué sur le test.</text>
+<path d="M800 581V621H400V650" fill="none" stroke="#71d9d1" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M800 621H1195V650" fill="none" stroke="#71d9d1" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="475" y="600" width="100" height="30" rx="15" fill="#153d47" stroke="#328b80"/><text x="525" y="620" text-anchor="middle" class="tag" fill="#8de1b8">NORMAL</text>
+<rect x="1025" y="600" width="120" height="30" rx="15" fill="#503a20" stroke="#bd913e"/><text x="1085" y="620" text-anchor="middle" class="tag" fill="#ffd27e">ANORMAL</text>
+<g filter="url(#shadow)"><rect x="210" y="658" width="380" height="130" rx="20" fill="url(#teal)" stroke="#32969a"/><rect x="1005" y="658" width="380" height="130" rx="20" fill="url(#amber)" stroke="#ba8b3c"/></g>
+<text x="245" y="700" class="head">État estimé : normal</text><text x="245" y="737" class="body">Aucune panne détectée</text><text x="245" y="765" class="small">Fin du diagnostic</text>
+<circle cx="1040" cy="690" r="16" fill="#ffd27e"/><text x="1040" y="695" text-anchor="middle" class="num">6</text><text x="1070" y="697" class="head">Identification de la panne</text><text x="1040" y="735" class="body">Classificateur multiclasse</text><text x="1040" y="763" class="small">À affiner par état de fonctionnement</text>
+<path d="M1195 789V817" stroke="#71d9d1" stroke-width="3" marker-end="url(#arrow)"/>
+<g filter="url(#shadow)"><rect x="795" y="828" width="800" height="108" rx="18" fill="#122a40" stroke="#35536c"/></g>
+<text x="830" y="865" class="head">Résultat du diagnostic</text>
+<text x="830" y="900" class="body">Freins usés  ·  huile  ·  direction assistée  ·  courroie  ·  allumage  ·  batterie</text>
+<text x="100" y="884" class="tag" fill="#72d9d1">APPRENTISSAGE &amp; ÉVALUATION</text>
+<text x="100" y="915" class="small">Découpage par fichier WAV : les fenêtres d’un même enregistrement restent dans le même ensemble.</text>
+<text x="100" y="952" class="small">Architecture basée sur le pipeline et les résultats présents dans le projet.</text>
+</svg>

@@ -1,0 +1,39 @@
+{
+  "evaluation": "5-fold stratified CV grouped by original WAV; each outer fold has an inner normal-only threshold calibration split",
+  "outer_fold_mean": {
+    "accuracy": 0.6428667896008105,
+    "balanced_accuracy": 0.5557133606776912,
+    "macro_precision": 0.5953722653832673,
+    "macro_recall": 0.5557133606776912,
+    "macro_f1": 0.5642809006272952
+  },
+  "outer_fold_std": {
+    "accuracy": 0.02347582325237801,
+    "balanced_accuracy": 0.03450148487318623,
+    "macro_precision": 0.03410686160465721,
+    "macro_recall": 0.034501484873186224,
+    "macro_f1": 0.030708409003137666
+  },
+  "pooled_oof_metrics": {
+    "recordings": 1386,
+    "accuracy": 0.6428571428571429,
+    "balanced_accuracy": 0.555597785345493,
+    "macro_precision": 0.5982473395235789,
+    "macro_recall": 0.5555977853454931,
+    "macro_f1": 0.5704098469600826
+  },
+  "classes": [
+    "normal",
+    "braking__worn_out_brakes",
+    "idle__combined__no oil_serpentine belt",
+    "idle__combined__power steering combined_no oil",
+    "idle__combined__power steering combined_no oil_serpentine belt",
+    "idle__combined__power steering combined_serpentine belt",
+    "idle__low_oil",
+    "idle__power_steering",
+    "idle__serpentine_belt",
+    "startup__bad_ignition",
+    "startup__dead_battery"
+  ],
+  "note": "Threshold is calibrated on the inner validation normal WAVs only. RF is trained on abnormal inner-training WAVs. Every original WAV appears in exactly one outer test fold."
+}

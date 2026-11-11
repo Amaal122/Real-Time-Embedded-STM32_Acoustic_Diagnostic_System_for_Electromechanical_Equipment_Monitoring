@@ -1,0 +1,27 @@
+{
+  "detector": "XGBoost ANOVA top-60",
+  "fault_classifier": "Random Forest, all 65 features",
+  "threshold": 0.8204828500747681,
+  "classes": [
+    "normal",
+    "braking__worn_out_brakes",
+    "idle__combined__no oil_serpentine belt",
+    "idle__combined__power steering combined_no oil",
+    "idle__combined__power steering combined_no oil_serpentine belt",
+    "idle__combined__power steering combined_serpentine belt",
+    "idle__low_oil",
+    "idle__power_steering",
+    "idle__serpentine_belt",
+    "startup__bad_ignition",
+    "startup__dead_battery"
+  ],
+  "metrics": {
+    "recordings": 278,
+    "accuracy": 0.658273381294964,
+    "balanced_accuracy": 0.5780269631554217,
+    "macro_precision": 0.653299246657847,
+    "macro_recall": 0.5780269631554217,
+    "macro_f1": 0.6027161911429014
+  },
+  "note": "Retrospective held-out split; previous models were also compared on this split."
+}

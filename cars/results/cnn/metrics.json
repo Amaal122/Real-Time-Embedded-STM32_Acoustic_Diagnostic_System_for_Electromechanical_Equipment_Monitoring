@@ -1,0 +1,19 @@
+{
+  "model": "CNN on 64-band log-Mel spectrograms",
+  "task": "10-class fault type classification, abnormal recordings only",
+  "selected_epoch_by_validation_macro_f1": 49,
+  "best_validation_macro_f1": 0.5858879904512702,
+  "train_recordings": 628,
+  "validation_recordings": 158,
+  "test_recordings": 198,
+  "test_metrics": {
+    "recordings": 198,
+    "accuracy": 0.47474747474747475,
+    "balanced_accuracy": 0.5396614979223675,
+    "macro_precision": 0.5131596024942799,
+    "macro_f1": 0.5040647016290913
+  },
+  "framework": "PyTorch 2.15.0+cpu",
+  "device": "cpu",
+  "note": "CNN epoch selected on validation; test was measured for this run but has also been used in previous project model comparisons."
+}

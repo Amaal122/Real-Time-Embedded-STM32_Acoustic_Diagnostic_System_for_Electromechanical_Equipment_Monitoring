@@ -1,0 +1,29 @@
+{
+  "seed": 42,
+  "recordings_per_split": {
+    "train": 886,
+    "validation": 222,
+    "test": 278
+  },
+  "window_rows_per_split": {
+    "train": 1772,
+    "validation": 444,
+    "test": 556
+  },
+  "file_overlap": false,
+  "target_false_positive_rate": 0.05,
+  "threshold_rule": "95th percentile of normal validation recording scores for each XGBoost and AE detector",
+  "selector_top_k": 60,
+  "selectors": [
+    "JSD",
+    "ANOVA"
+  ],
+  "fault_diagnosis": "10-way fault-type classification on abnormal recordings only; normal clips are excluded",
+  "autoencoder": "scikit-learn MLPRegressor used as a reconstruction autoencoder because TensorFlow and PyTorch are unavailable",
+  "limitations": [
+    "Single stratified recording-level holdout; estimates are uncertain, especially for the smallest fault classes.",
+    "The autoencoder is a lightweight MLP reconstruction baseline, not the official car-dataset baseline.",
+    "The dataset has three operating conditions; pooled results may reflect condition as well as fault acoustics.",
+    "A validation-normal quantile targets a calibration false-alarm rate; the realized test rate may differ."
+  ]
+}

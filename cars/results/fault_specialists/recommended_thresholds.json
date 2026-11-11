@@ -1,0 +1,151 @@
+{
+  "cv": "5-fold stratified by component presence at WAV level; an inner calibration split chooses each threshold",
+  "threshold_strategies": {
+    "max_f1": "threshold maximizing F1 on inner calibration recordings",
+    "target_recall": "highest threshold achieving at least 80% recall on inner calibration recordings"
+  },
+  "threshold_profiles_for_full_data_models": {
+    "worn_out_brakes": {
+      "positive_component_categories": [
+        "braking__worn_out_brakes"
+      ],
+      "max_f1_threshold_median": 0.175,
+      "target_recall_threshold_median": 0.12000000000000001,
+      "target_recall": 0.8,
+      "fold_max_f1_thresholds": [
+        0.175,
+        0.175,
+        0.14625,
+        0.18000000000000002,
+        0.19625
+      ],
+      "fold_target_recall_thresholds": [
+        0.26375,
+        0.06875,
+        0.0625,
+        0.12000000000000001,
+        0.22125
+      ]
+    },
+    "bad_ignition": {
+      "positive_component_categories": [
+        "startup__bad_ignition"
+      ],
+      "max_f1_threshold_median": 0.19999999999999998,
+      "target_recall_threshold_median": 0.1325,
+      "target_recall": 0.8,
+      "fold_max_f1_thresholds": [
+        0.185,
+        0.2775,
+        0.19999999999999998,
+        0.31125,
+        0.08875
+      ],
+      "fold_target_recall_thresholds": [
+        0.1375,
+        0.1325,
+        0.19999999999999998,
+        0.11875,
+        0.10999999999999999
+      ]
+    },
+    "dead_battery": {
+      "positive_component_categories": [
+        "startup__dead_battery"
+      ],
+      "max_f1_threshold_median": 0.305,
+      "target_recall_threshold_median": 0.08374999999999999,
+      "target_recall": 0.8,
+      "fold_max_f1_thresholds": [
+        0.17625000000000002,
+        0.17875000000000002,
+        0.59875,
+        0.42625,
+        0.305
+      ],
+      "fold_target_recall_thresholds": [
+        0.08374999999999999,
+        0.0025,
+        0.1475,
+        0.03125,
+        0.09375
+      ]
+    },
+    "low_oil": {
+      "positive_component_categories": [
+        "idle__combined__no oil_serpentine belt",
+        "idle__combined__power steering combined_no oil",
+        "idle__combined__power steering combined_no oil_serpentine belt",
+        "idle__low_oil"
+      ],
+      "max_f1_threshold_median": 0.48875,
+      "target_recall_threshold_median": 0.53,
+      "target_recall": 0.8,
+      "fold_max_f1_thresholds": [
+        0.52625,
+        0.41375,
+        0.5075,
+        0.48875,
+        0.3275
+      ],
+      "fold_target_recall_thresholds": [
+        0.5375,
+        0.5425,
+        0.53,
+        0.4925,
+        0.51125
+      ]
+    },
+    "power_steering": {
+      "positive_component_categories": [
+        "idle__combined__power steering combined_no oil",
+        "idle__combined__power steering combined_no oil_serpentine belt",
+        "idle__combined__power steering combined_serpentine belt",
+        "idle__power_steering"
+      ],
+      "max_f1_threshold_median": 0.36375,
+      "target_recall_threshold_median": 0.38749999999999996,
+      "target_recall": 0.8,
+      "fold_max_f1_thresholds": [
+        0.36124999999999996,
+        0.32375,
+        0.41875,
+        0.4,
+        0.36375
+      ],
+      "fold_target_recall_thresholds": [
+        0.38749999999999996,
+        0.3825,
+        0.46875,
+        0.45499999999999996,
+        0.37625
+      ]
+    },
+    "serpentine_belt": {
+      "positive_component_categories": [
+        "idle__combined__no oil_serpentine belt",
+        "idle__combined__power steering combined_no oil_serpentine belt",
+        "idle__combined__power steering combined_serpentine belt",
+        "idle__serpentine_belt"
+      ],
+      "max_f1_threshold_median": 0.43125,
+      "target_recall_threshold_median": 0.5375,
+      "target_recall": 0.8,
+      "fold_max_f1_thresholds": [
+        0.4,
+        0.5075,
+        0.43125,
+        0.34625,
+        0.45625
+      ],
+      "fold_target_recall_thresholds": [
+        0.45625,
+        0.6387499999999999,
+        0.5375,
+        0.54,
+        0.47750000000000004
+      ]
+    }
+  },
+  "note": "Outer-fold predictions use thresholds selected without outer test labels. Median thresholds are starting points for full-data refit models; verify on fresh recordings before deployment."
+}

@@ -1,0 +1,11 @@
+,braking__worn_out_brakes,idle__combined__no oil_serpentine belt,idle__combined__power steering combined_no oil,idle__combined__power steering combined_no oil_serpentine belt,idle__combined__power steering combined_serpentine belt,idle__low_oil,idle__power_steering,idle__serpentine_belt,startup__bad_ignition,startup__dead_battery
+braking__worn_out_brakes,12,0,0,1,1,0,1,0,0,0
+idle__combined__no oil_serpentine belt,0,7,4,5,4,1,0,1,0,0
+idle__combined__power steering combined_no oil,0,0,12,2,0,4,4,0,0,0
+idle__combined__power steering combined_no oil_serpentine belt,0,6,5,7,3,1,0,0,0,0
+idle__combined__power steering combined_serpentine belt,0,1,5,2,15,0,0,0,0,0
+idle__low_oil,0,1,7,0,1,11,0,0,0,2
+idle__power_steering,0,0,0,0,1,0,22,0,1,2
+idle__serpentine_belt,0,1,0,2,1,0,2,17,0,0
+startup__bad_ignition,0,1,0,0,0,2,1,0,8,0
+startup__dead_battery,0,0,1,1,0,2,0,0,0,7

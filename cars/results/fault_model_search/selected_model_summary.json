@@ -1,0 +1,18 @@
+{
+  "selected_on": "validation macro-F1, tie-broken by balanced accuracy then accuracy",
+  "selected_model": "RandomForest",
+  "selector": "ALL",
+  "parameters": {
+    "min_samples_leaf": 1
+  },
+  "selected_feature_count": 65,
+  "test_metrics": {
+    "recordings": 198,
+    "accuracy": 0.6414141414141414,
+    "balanced_accuracy": 0.6436647410560454,
+    "macro_precision": 0.6792801224708245,
+    "macro_f1": 0.6506921388265953
+  },
+  "test_recordings": 198,
+  "note": "Test set was not used to choose the model; test results are retrospective alongside previous project comparisons."
+}
